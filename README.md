@@ -18,25 +18,25 @@ There's a couple things you have to do in order to add a brand new puzzle.
 
 1. Add the new puzzle folder
 
-Check out [the puzzles folder](source/puzzles/) - there's a folder there for every puzzle type we have. You just need to add a folder for the new puzzle type.
+  Check out [the puzzles folder](source/puzzles/) - there's a folder there for every puzzle type we have. You just need to add a folder for the new puzzle type.
 
 Keep in mind that the name of the folder will be the slug in the URL, so please choose something that is readable and kinda SEO friendly. For instnace, if your puzzle is named "Bob the Builder", name the folder `bob-builder`.
 
 2. Add the puzzle to [puzzles.yaml](data/puzzles.yaml)
 
-There is a YAML file in the [data folder](data/) that contains some meta data for each of the puzzles. You need to add your new puzzle type in to that file.
+  There is a YAML file in the [data folder](data/) that contains some meta data for each of the puzzles. You need to add your new puzzle type in to that file.
 
-**puzzleDir must be the same as the name of the folder you created in the puzzles folder**
+  **puzzleDir must be the same as the name of the folder you created in the puzzles folder**
 
-Please just add your puzzle to the end of the list. The ordering in that file will match the ordering on the website - you can suggest a higher position in the PR, and we can discuss that there. But, by default, use the bottom of the list.
+  Please just add your puzzle to the end of the list. The ordering in that file will match the ordering on the website - you can suggest a higher position in the PR, and we can discuss that there. But, by default, use the bottom of the list.
 
-Also, you must have a link in your puzzle description to the actual puzzle directory. You can see examples in the other puzzle types, but essentially your description just needs a link in it like `<a href="/bob-builder">Bob the Builder</a>`.
+  Also, you must have a link in your puzzle description to the actual puzzle directory. You can see examples in the other puzzle types, but essentially your description just needs a link in it like `<a href="/bob-builder">Bob the Builder</a>`.
 
-**Your description MUST have all special characters encoded.**
+  **Your description MUST have all special characters encoded.**
 
 3. [Add some solutions](#adding-solutions)
 
-For obvious reasons, new puzzle PRs with no solutions will not be merged.
+  For obvious reasons, new puzzle PRs with no solutions will not be merged.
 
 ## Adding Solutions
 
