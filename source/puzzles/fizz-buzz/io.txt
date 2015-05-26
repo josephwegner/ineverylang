@@ -1,5 +1,5 @@
 ---
-source: Katy Moe https://github.com/kmoe/fizzbuzz
+source: https://github.com/kmoe/fizzbuzz
 ---
 
 for(i, 1, 100,

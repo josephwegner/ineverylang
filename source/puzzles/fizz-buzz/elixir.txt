@@ -1,5 +1,5 @@
 ---
-source: Katy Moe https://github.com/kmoe/fizzbuzz
+source: https://github.com/kmoe/fizzbuzz
 ---
 
 fizzbuzz = fn (_, 0, 0) -> "fizzbuzz"
