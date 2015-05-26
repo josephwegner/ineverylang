@@ -1,0 +1,4 @@
+---
+source: http://rosettacode.org/wiki/Quine
+---
+let q s = putStrLn (s ++ show s) in q "let q s = putStrLn (s ++ show s) in q "

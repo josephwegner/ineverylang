@@ -1,0 +1,14 @@
+.main-container
+  position: relative
+  z-index: 10
+  @extend .col-sm-offset-7
+  @extend .col-sm-5
+
+  &.solution-container
+    @extend .col-sm-9
+    @extend .col-sm-offset-3
+
+@media (max-width: 768px)
+  .main-container
+    padding: 12px
+    padding-bottom: 112px

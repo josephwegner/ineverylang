@@ -1,0 +1,33 @@
+// Vendor
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "vendor/highlight-github"
+
+// Boilerplate
+@import "variables"
+@import "zindex"
+
+// Modules
+@import "modules/header"
+@import "modules/footer"
+@import "modules/about_container"
+@import "modules/main_container"
+@import "modules/filter"
+@import "modules/puzzles"
+@import "modules/solutions"
+@import "modules/code"
+@import "modules/icons"
+
+
+// Misc Styles
+body
+  font-family: 'PT Sans', sans-serif
+
+.page_content
+  @extend .container-fluid
+
+.columns
+  @extend .row
+
+.back-link
+  font-size: 18px

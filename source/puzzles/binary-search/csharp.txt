@@ -1,0 +1,4 @@
+---
+source: http://www.dotnetperls.com/array-binarysearch
+---
+int index1 = Array.BinarySearch(array, "m");

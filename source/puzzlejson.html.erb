@@ -1,0 +1,9 @@
+<%=
+  Hash[solutions.map { |solution| 
+    solution.delete(:filename)
+    solution.delete(:smallFooter)
+    solution.delete(:index)
+
+    [solution[:language], solution] 
+  }].to_json
+%>

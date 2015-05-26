@@ -1,0 +1,71 @@
+---
+source: http://www.blog.btbw.pl/java/code-kata-9-the-tea-party/
+---
+import unittest
+
+from TheTeaParty import TheTeaParty
+
+
+class TheTeaPartyTest(unittest.TestCase):
+    def test_getWelcomeString(self):
+        # arrange
+        theTeaParty = TheTeaParty()
+
+        orwell = "Orwell"
+        austen = "Austen"
+        newton = "Newton"
+        expectedOrwell = "Hello Mr. Orwell"
+        expectedAusten = "Hello Ms. Austen"
+        expectedNewton = "Hello Sir Newton"
+
+        # act & assert
+        self.assertEqual(theTeaParty.welcome(orwell, True, False), expectedOrwell)
+        self.assertEqual(theTeaParty.welcome(austen, False, False), expectedAusten)
+        self.assertEqual(theTeaParty.welcome(newton, True, True), expectedNewton)
+
+        self.assertEqual(theTeaParty.welcomeMr(orwell), expectedOrwell)
+        self.assertEqual(theTeaParty.welcomeMs(austen), expectedAusten)
+        self.assertEqual(theTeaParty.welcomeSir(newton), expectedNewton)
+
+
+
+HELLO = "Hello"
+SIR = "Sir"
+MS = "Ms."
+MR = "Mr."
+
+
+class TheTeaParty(object):
+    def welcomeMr(self, lastName):
+        return self.welcome(lastName, True, False)
+
+    def welcomeSir(self, lastName):
+        return self.welcome(lastName, True, True)
+
+    def welcomeMs(self, lastName):
+        return self.welcome(lastName, False, False)
+
+    def welcome(self, lastName, isMan, isSir):
+        return HELLO + " " + self.getPrefix(isMan, isSir) + " " + lastName
+
+    def getPrefix(self, isMan, isSir):
+
+        if self.isManNotSir(isMan, isSir):
+            return MR
+
+        if self.isManAndSir(isMan, isSir):
+            return SIR
+
+        if self.isNotMan(isMan):
+            return MS
+
+        return ""
+
+    def isManNotSir(self, isMan, isSir):
+        return self.isManAndSir(isMan, (not isSir))
+
+    def isManAndSir(self, isMan, isSir):
+        return isMan & isSir
+
+    def isNotMan(self, isMan):
+        return not isMan

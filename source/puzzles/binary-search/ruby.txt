@@ -1,0 +1,4 @@
+---
+source: http://ruby-doc.org/core-2.0/Array.html#method-i-bsearch
+---
+ary.bsearch {|x| x >=   4 } #=> 4

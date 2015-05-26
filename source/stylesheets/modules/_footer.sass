@@ -1,0 +1,29 @@
+.footer
+  @extend .container-fluid
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  color: rgba(255, 255, 255, .6)
+
+  a
+    color: rgba(255, 255, 255, .6)
+    text-decoration: underline
+
+.footer-sizer
+  @extend .row
+
+.footer-content
+  @extend .col-sm-7
+
+  &.small-footer
+    @extend .col-sm-3
+
+@media (max-width: 768px)
+  .footer
+    background-color: $red
+    text-align: center
+    z-index: 10
+
+  .byline
+    display: none

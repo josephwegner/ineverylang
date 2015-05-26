@@ -1,0 +1,27 @@
+---
+source: https://gist.github.com/Janiczek/3133037
+---
+-module(binary_search).
+-export([binary_search/2]).
+
+-include_lib("eunit/include/eunit.hrl").
+
+binary_search(List, N) ->
+
+  Length = length(List),
+  Middle = (Length + 1) div 2, %% saves us hassle with odd/even indexes
+
+  case Middle of
+    0 -> -1; %% empty list -> item not found
+    _ ->
+
+      Item = lists:nth(Middle, List),
+
+      case Item of
+        N -> Middle; %% yay, found it!
+        _ -> case Item > N of
+               true  -> binary_search(lists:sublist(List, Length - Middle), N); %% LT, search on left side
+               false -> binary_search(lists:nthtail(Middle, List), N)           %% GT, search on right side
+             end
+      end
+  end.

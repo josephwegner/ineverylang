@@ -1,0 +1,8 @@
+---
+source: https://github.com/leachim6/hello-world
+---
+-module(erlang_hw).
+-export([start/0]).
+
+start() ->
+  io:format("Hello World~n").

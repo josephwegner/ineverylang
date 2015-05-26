@@ -1,0 +1,16 @@
+.about-container.solution-about(class="puzzle-index-#{index}")
+  .about-sizer
+    .about-content
+      %h1.about-header= "#{puzzle['prettyName']} in #{language}"
+      %p.about-paragraph= puzzle['description']
+      %br
+      %a.back-link(href="/#{puzzle['puzzleDir']}")
+        %span.link-arrow &#8672;
+        = "All #{puzzle['prettyName']} solutions"
+.main-container.solution-container
+  .code
+    %pre
+      %code= code
+  %address.solution-source
+    source:
+    %a(href=source)= source

@@ -1,0 +1,4 @@
+---
+source: http://rosettacode.org/wiki/Fibonacci_sequence
+---
+fib = 0 : 1 : zipWith (+) fib (tail fib)

@@ -1,0 +1,16 @@
+---
+source: http://stackoverflow.com/a/3881926/489230
+---
+sub binary_search {
+    ...
+    my ( $mid, $val, $solution );
+    while ( $min <= $max ) {
+        ...
+        else {
+            $solution = $mid; # Store a possible solution.
+            $max = $mid - 1;  # But continue with the binary search
+                              # until $min and $max converge on each other.
+        }
+    }
+    return $solution;
+}

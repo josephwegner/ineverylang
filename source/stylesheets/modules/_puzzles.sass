@@ -1,0 +1,32 @@
+.puzzle-list
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.puzzle
+  color: #333
+  background: #fdfdfd
+  border: 1px solid #ccc
+  border-radius: 3px
+  padding: 12px
+  margin-bottom: 18px
+
+  @for $i from 1 through length($color-rotation)
+    &:nth-child(#{$i}n)
+      .puzzle-name
+        color: #{nth($color-rotation, $i)}
+
+      a
+        color: #{nth($color-rotation, $i)}
+
+.ads > ins
+  display: inline-block
+  height: 200px
+
+.puzzle-name
+  margin-top: 0
+
+@media (max-width: 768px)
+  .ads > ins
+    height: 100px
+    width: 320px

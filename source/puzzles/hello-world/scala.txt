@@ -1,0 +1,6 @@
+---
+source: https://github.com/leachim6/hello-world
+---
+object HelloWorld extends Application {
+  println("Hello World")
+}

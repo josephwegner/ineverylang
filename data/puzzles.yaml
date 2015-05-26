@@ -1,0 +1,29 @@
+puzzles:
+  - puzzleDir: 'hello-world'
+    prettyName: "Hello, World!"
+    description: |
+      <a href="/hello-world">&ldquo;Hello, World!&rdquo;</a> is one of the most well known, but also the most basic challenges in any programming language. It is most often used as an introductory example of how the language works. Very simply, a &ldquo;Hello, World!&rdquo; program just outputs the text &ldquo;Hello, World!&rdquo;.
+  - puzzleDir: "quine"
+    prettyName: "Quine"
+    description: |
+      A <a href="/quine">Quine</a> is a type of program that takes no input, and outputs the source code of the program. A quine program is often referred to as &ldquo;self-replicating&rdquo; or &ldquo;self-reproducing&rdquo;, and can be solved in any Turing complete programming language.
+  - puzzleDir: "fizz-buzz"
+    prettyName: "Fizz Buzz"
+    description: |
+      The <a href="/fizz-buzz">Fizz Buzz</a> puzzle asks you to count from 0 to N, replacing every number divisible by three with &ldquo;fizz&rdquo; and every word divisible by five with &ldquo;buzz&rdquo;. Fizz Buzz if used often as a first&ndash;round test in programming interviews &ndash; the challenge is simple, but requires an understanding of basic programming logic to complete.
+  - puzzleDir: 'fibonacci-sequence'
+    prettyName: 'Fibonacci Sequence'
+    description: |
+      A <a href="/fibonacci-sequence">Fibonacci Sequence</a> is a list of numbers, where each number is calculated by adding up the two numbers previous to it. Most Fibonacci Sequence challenges ask the program to return the number at the Nth position in a Fibonacci sequence.
+  - puzzleDir: 'binary-search'
+    prettyName: 'Binary Search'
+    description: |
+      A <a href="/binary-search">Binary Search</a> algorithm is used for searching for a value in an array. The most basic search algorithm, a Linear Search, is O(n) in complexity - the binary search improves on this at O(log n). A binary search works be breaking your search array in half continuously until you find a matching value.
+  - puzzleDir: 'nasa-countdown'
+    prettyName: 'NASA Countdown'
+    description: |
+      It&rsquo;s your first day working at NASA, and a rocket is about to take off! In just a few moments, the ground control chief is going to tell you how many seconds until liftoff, and you need to have a program ready to start the <a href="/nasa-countdown">NASA countdown</a>!
+  - puzzleDir: "tea-party"
+    prettyName: "The Tea Party"
+    description: |
+      You are hosting a <a href="/tea-party">Tea Party</a>, and need to greet all of your guests. Not only do you have both men and women coming to the party, but you have some guests who have been knighted by the Queen of England! Women should be greeted with a &ldquo;Ms.&rdquo;, men with a &ldquo;Mr.&rdquo;, and knighted men with a &ldquo;Sir&rdquo;.

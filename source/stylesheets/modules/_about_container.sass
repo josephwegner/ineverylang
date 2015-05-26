@@ -1,0 +1,50 @@
+.about-container
+  @extend .col-sm-7
+  height: 100%
+  position: fixed
+  left: 0
+  top: 0
+  color: #fff
+  padding-top: 52px
+
+  @for $i from 1 through length($color-rotation)
+    &.puzzle-index-#{$i - 1}
+      background-color: #{nth($color-rotation, $i)}
+
+      a
+        color: lighten(nth($color-rotation, $i), 20%)
+
+.about-container.solution-about
+  @extend .col-sm-3
+  position: fixed
+
+  .about-content
+    @extend .col-sm-10
+    @extend .col-sm-offset-1
+
+
+.about-sizer
+  @extend .row
+
+.about-content
+  @extend .col-sm-7
+  @extend .col-sm-offset-2
+
+.about-header
+  @extend .h2
+  margin: 36px 0
+  padding-bottom: 18px
+  border-bottom: 1px solid white
+  font-weight: 700
+
+.homepage-about
+  background-color: $red
+
+@media (max-width: 768px)
+  .about-container,
+  .about-container.solution-about
+    padding-top: 0
+    position: static
+
+  .about-header
+    margin: 12px 0

@@ -1,0 +1,5 @@
+---
+source: http://rosettacode.org/wiki/Quine
+---
+x = 'x = %r\nprint(x %% x)'
+print(x % x)

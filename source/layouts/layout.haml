@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    - if not defined? title
+      - title = "In Every Language"
+
+    %title= title
+    %meta{name: "og:title", content: title}
+    %meta{name: "twitter:title", content: title}
+
+    - if current_page.data.has_key?('description')
+      - description = current_page.data.description
+    - elsif not defined? description or description.nil? 
+      - description = "In Every Language is a collection of popular programming puzzles solutions in every language. Or, at least, a lot of languages. The collection is always growing, and the existing solutions are always being improved. The gist is this: these are the best programming solutions in every language."
+
+    %meta{name: "description", content: description }
+    %meta{name: "og:description", content: description }
+    %meta{name: "twitter:description", content: description}
+
+    %meta(name="og:image" content="/images/ineverylang.png")
+    %meta(name="twitter:image" content="/images/ineverylang.png")
+
+    %meta(name="og:site_name" content="In Every Language")
+    %meta(name="og:type" content="website")
+    %meta{name: "og:url", content: "http://www.ineverylang.com/#{current_page.path.sub('.html', '')}>"}
+
+    %meta(name="twitter:card" content="summary")
+    %meta(name="twitter:site" content="@Joe_Wegner")
+
+    %meta(name="viewport" content="width=device-width; initial-scale=1.0, user-scalable=no")
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    %link(href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css')
+
+%body
+  =  partial "partials/header"
+  .page_content
+    .columns
+      = yield
+
+  = partial "partials/footer", :locals => { :smallFooter => defined?(smallFooter) && smallFooter }

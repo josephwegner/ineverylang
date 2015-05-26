@@ -1,0 +1,11 @@
+.footer
+  .footer-sizer
+    .footer-content{:class => ("small-footer" if smallFooter)}
+      .ads
+        = javascript_include_tag "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+
+      %address.byline
+        In Every Language is made by
+        %a(href="http://www.wegnerdesign.com") WegnerDesign
+        = ", Have more solutions, or found a bug?"
+        %a(href="https://github.com/josephwegner/ineverylang") Submit a PR!

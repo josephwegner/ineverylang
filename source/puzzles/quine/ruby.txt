@@ -1,0 +1,7 @@
+---
+source: http://rosettacode.org/wiki/Quine
+---
+$ ruby -e '_="_=%p;puts _%%_";puts _%_'
+_="_=%p;puts _%%_";puts _%_
+$ ruby -e '_="_=%p;puts _%%_";puts _%_' | ruby
+_="_=%p;puts _%%_";puts _%_

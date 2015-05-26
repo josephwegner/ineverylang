@@ -1,0 +1,12 @@
+---
+source: http://umairsaeed.com/2012/07/18/a-quine-in-objective-c/
+---
+#import <Foundation/Foundation.h>
+int main (int argc, const char * argv[]) {
+    @autoreleasepool
+    {
+        NSString *str=@"#import <Foundation/Foundation.h> %c int main (int argc, const char * argv[]) { @autoreleasepool { NSString *str=%c%c%@%c; NSLog(str, 10, 64, 34, str, 34);} return 0;}";
+        NSLog(str, 10, 64, 34, str, 34);
+    }
+    return 0;
+}

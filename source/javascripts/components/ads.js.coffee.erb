@@ -1,0 +1,25 @@
+width = $(window).width()
+
+if width <= 768
+  newAdType = 'mobile'
+else
+  newAdType = 'desktop'
+
+$ad = $("<ins />").addClass("adsbygoogle")
+
+switch newAdType
+  when 'mobile'
+    $ad.attr('data-ad-client', '<%= ENV['MOBILE_AD_CLIENT'] %>')
+      .attr('data-ad-slot', '<%= ENV['MOBILE_AD_SLOT'] %>')
+    
+  when 'desktop'
+    $ad.attr('data-ad-client', '<%= ENV['DESKTOP_AD_CLIENT'] %>')
+      .attr('data-ad-slot', '<%= ENV['DESKTOP_AD_SLOT'] %>')
+
+$(document).ready () ->
+  $('.ads').append($ad)
+  console.log($ad)
+
+  setTimeout ->
+    (adsbygoogle = window.adsbygoogle || []).push({})
+  , 0

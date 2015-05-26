@@ -1,0 +1,20 @@
+.about-container.homepage-about
+  .about-sizer
+    .about-content
+      %h1.about-header Welcome
+      %p.about-paragraph
+        %strong In Every Language
+        is a collection of popular programming puzzles solutions in every language. Or, at least, a lot of languages. The collection is always growing, and the existing solutions are always being improved. The gist is this: these are the best programming solutions in every language.
+
+
+      .puzzle-filter
+        %span.puzzle-pretext Show me
+        %input.puzzle-filter-input(type="text" placeholder="all puzzles" data-component="filter-input")
+
+.main-container
+  %ul.puzzle-list
+    - data.puzzles.first[1].each do |puzzle|
+      %li.puzzle(id="#{puzzle['puzzleDir']}" data-component="filterable" data-filter-text="#{puzzle['prettyName']} #{puzzle['description']}" data-filter-target="/#{puzzle['puzzleDir']}")
+        %h3.puzzle-name
+          %a(href="/#{puzzle['puzzleDir']}")= puzzle['prettyName']
+        %p.puzzle-description!= puzzle['description']

@@ -1,0 +1,21 @@
+{
+  "name": "ineverylang",
+  "version": "0.0.0",
+  "authors": [
+    "Joe Wegner <joe@wegnerdesign.com>"
+  ],
+  "description": "Common programming puzzle solutions in every language.",
+  "license": "MIT",
+  "homepage": "http://www.ineverylang.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

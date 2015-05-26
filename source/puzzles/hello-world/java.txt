@@ -1,0 +1,8 @@
+---
+source: https://github.com/leachim6/hello-world
+---
+public class java {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}

@@ -1,0 +1,9 @@
+---
+source: https://github.com/leachim6/hello-world
+---
+#include<stdio.h>
+
+int main(void) {
+	puts("Hello World");
+	return 0;
+}

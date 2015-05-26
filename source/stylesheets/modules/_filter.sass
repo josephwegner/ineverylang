@@ -1,0 +1,25 @@
+.puzzle-filter
+  white-space: nowrap
+
+.puzzle-pretext
+  @extend .h2
+  display: inline
+
+.puzzle-filter-input
+  @extend .h2
+  display: inline
+  background: transparent
+  border: none
+  color: #fff
+  outline: none
+  margin: 24px 0 0 4px
+
+  &::placeholder
+    position: relative
+    top: 2px
+    color: rgba(255, 255, 255, .6)
+
+@media (max-width: 768px)
+  .puzzle-filter
+    overflow: hidden
+    padding-bottom: 12px

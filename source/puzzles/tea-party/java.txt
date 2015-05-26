@@ -1,0 +1,36 @@
+---
+source: https://github.com/parkerboundy/Coding-Kata-Soultions
+---
+package org.codingkata.unit;
+
+import org.codingkata.unit.api.BaseKataSolution;
+
+public class MyKata extends BaseKataSolution {
+
+    /**
+	 * Welcome a guest
+	 *
+	 * @param lastName   the last name of the guest
+	 * @param isWoman    true if the guest is female
+	 * @param isSir      true if the guest was knighted by the queen
+	 *
+	 * @return          issues welcome text to the guest
+	 */
+	public String welcome (String lastName, boolean isWoman, boolean isSir){
+		String result = "Hello ";
+
+		if(isWoman){
+			result += "Ms. ";
+		}
+		else if(isSir){
+			result += "Sir ";
+		}
+		else {
+			result += "Mr. ";
+		}
+		result += lastName;
+
+		return result;
+	}
+
+}

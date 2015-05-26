@@ -1,0 +1,43 @@
+---
+source: https://github.com/anteaya/katas
+---
+class TeaParty
+  attr_accessor :input, :name
+
+  GUESTS = {"Jane Austin" => "Ms. Austin", "George Orwell" => "Mr. Orwell", "Isaac Newton" => "Sir Newton", "Jamie Oliver" => "Mr. Oliver", "Lewis Carroll" => "Prof. Carroll", "Edna" => "Dame Edna", "Maggie Smith" => "Dame Maggie Smith", "Ben Kingsley" => "Sir Kingsley"}
+
+  def initialize
+    self.input = $stdin
+  end
+
+  def guestlist
+    list = []
+    GUESTS.each_key { |key| list << key }
+    list
+  end
+
+  def welcome
+    "Welcome to my tea party. Whom shall I announce has arrived?"
+  end
+
+  def get_name
+    puts "I am expecting the following guests: #{guestlist.join(", ")}"
+    puts welcome
+    @name = input.gets.chomp
+  end
+
+  def check_guestlist
+    get_name
+    name_to_check = @name
+    GUESTS.each_pair {|key, value| @name = value if key == @name }
+    if name_to_check == @name
+      raise "I'm sorry your name does not appear on my guestlist."
+    end
+  end
+
+  def greeting
+    check_guestlist
+    "Hello #{@name}"
+  end
+
+end

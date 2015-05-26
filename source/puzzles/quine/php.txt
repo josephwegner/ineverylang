@@ -1,0 +1,5 @@
+---
+source: http://rosettacode.org/wiki/Quine
+---
+$p = '$p = %c%s%c; printf($p,39,$p,39);
+'; printf($p,39,$p,39);

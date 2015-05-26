@@ -1,0 +1,4 @@
+---
+source: http://rosettacode.org/wiki/Quine
+---
+(function(){print("("+arguments.callee.toString().replace(/\s/g,'')+")()");})()

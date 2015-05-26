@@ -1,0 +1,5 @@
+---
+source: http://rosettacode.org/wiki/Quine
+---
+$s = q($s = q(%s); printf($s, $s);
+); printf($s, $s);
