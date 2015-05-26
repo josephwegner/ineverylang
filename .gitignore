@@ -20,3 +20,5 @@
 .divshot-cache
 
 .env
+
+/bower_components
