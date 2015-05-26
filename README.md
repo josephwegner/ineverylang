@@ -20,7 +20,7 @@ There's a couple things you have to do in order to add a brand new puzzle.
 
   Check out [the puzzles folder](source/puzzles/) - there's a folder there for every puzzle type we have. You just need to add a folder for the new puzzle type.
 
-Keep in mind that the name of the folder will be the slug in the URL, so please choose something that is readable and kinda SEO friendly. For instnace, if your puzzle is named "Bob the Builder", name the folder `bob-builder`.
+  Keep in mind that the name of the folder will be the slug in the URL, so please choose something that is readable and kinda SEO friendly. For instnace, if your puzzle is named "Bob the Builder", name the folder `bob-builder`.
 
 2. Add the puzzle to [puzzles.yaml](data/puzzles.yaml)
 
@@ -42,21 +42,21 @@ Keep in mind that the name of the folder will be the slug in the URL, so please 
 
 1. Make sure the language for your solutions already exists. If not, [add it](#adding-languages)
 
-If the language doesn't, we won't be able to properly build the page for your solution. That's bad.
+  If the language doesn't, we won't be able to properly build the page for your solution. That's bad.
 
 2. Create the solution in the appropriate [puzzle folder](source/puzzles/).
-
-You need to name the file as `language.txt`. The file name should match the language shortname in [languages.yml](data/languages.yml).
+ 
+  You need to name the file as `language.txt`. The file name should match the language shortname in [languages.yml](data/languages.yml).
 
 3. Set the source in the frontmatter
 
-If the code your submitting isn't yours, put a link here to wherever you got it from. If it is yours, this is your chance for some shameless self promotion - link to your portfolio, twitter, or a rickroll.
+  If the code your submitting isn't yours, put a link here to wherever you got it from. If it is yours, this is your chance for some shameless self promotion - link to your portfolio, twitter, or a rickroll.
 
-**If you submit a solution attributed to yourself, and I find out that you are not the original source, I will remove your submission. I will also find some way to ruthlessly publicly shame you, because that's super not cool.**
+  **If you submit a solution attributed to yourself, and I find out that you are not the original source, I will remove your submission. I will also find some way to ruthlessly publicly shame you, because that's super not cool.**
 
 4. Check your page using `middleman` server. Sometimes the code highlighting gets wacky. If it is, either fix the issue or submit an issue and I will try to fix it.
 
-Also, if you're submitting an update to a solution that already exists, please think very hard about _why_ your solution is better. Put that reasoning in the PR. I am not an expert in all of these languages, and will likely not know the merits of every possible solution. If I'm not convinced yours is "better", I will not merge.
+  Also, if you're submitting an update to a solution that already exists, please think very hard about _why_ your solution is better. Put that reasoning in the PR. I am not an expert in all of these languages, and will likely not know the merits of every possible solution. If I'm not convinced yours is "better", I will not merge.
 
 ## Adding Languages
 
