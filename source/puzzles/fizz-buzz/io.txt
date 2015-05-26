@@ -1,0 +1,10 @@
+---
+source: Katy Moe https://github.com/kmoe/fizzbuzz
+---
+
+for(i, 1, 100,
+  if(i % 3 == 0) then (fizz := "fizz") else (fizz := "")
+  if(i % 5 == 0) then (buzz := "buzz") else (buzz := "")
+
+  if(fizz != "" or buzz != "") then ((fizz .. buzz) println) else (i println)
+)
