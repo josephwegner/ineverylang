@@ -46,7 +46,7 @@ There's a couple things you have to do in order to add a brand new puzzle.
 
 2. Create the solution in the appropriate [puzzle folder](source/puzzles/).
  
-  You need to name the file as `language.txt`. The file name should match the language shortname in [languages.yml](data/languages.yml).
+  You need to name the file as `language.txt`. The file name should match the language shortname in [languages.yaml](data/languages.yaml).
 
 3. Set the source in the frontmatter
 
@@ -62,7 +62,7 @@ There's a couple things you have to do in order to add a brand new puzzle.
 
 In order to properly build pages, as well as represent data in [the api](source/puzzlejson.html.erb), we need to have pretty names defined for every language that solutions are written in.
 
-If you want to add a new language (awesome! please do! that's exciting!), all you have to do is add it to the [languages.yml](data/languages.yml).
+If you want to add a new language (awesome! please do! that's exciting!), all you have to do is add it to the [languages.yaml](data/languages.yaml).
 
 Please keep that file in alphabetical order, for sanity. Also, use a shortname (the part before the colon) that will look good in a slug, but still be pretty obvious what language you mean. For instance, if you're adding Visual Basic, make your slug `visual-basic`, instead of `vb`.
 
